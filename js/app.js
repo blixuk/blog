@@ -29,7 +29,7 @@ function getCurrentPosts() {
 		var post = year + '-' + month + '-' + ('0' + i).slice(-2);
 
 		try {
-			jQuery.get('/blog/posts/' + post + '.md', function(txt) {
+			jQuery.get('/posts/' + post + '.md', function(txt) {
 				var file = txt.split("----------");
 				var head = file[0].split("\n");
 
@@ -42,7 +42,7 @@ function getCurrentPosts() {
 }
 
 function getPost(args) {
-	var post = '/blog/posts/' + args + '.md';
+	var post = '/posts/' + args + '.md';
 
 	try {
 		jQuery.get(post, function(txt) {
@@ -66,7 +66,7 @@ function getArchiveYear(args) {
 
 	for (month = 1; month < 13; month++) {
 		for (day = 1; day < 32; day++) {
-			post = '/blog/posts/' + args + '-' + ('0' + (month + 1)).slice(-2) + '-' + ('0' + (day + 1)).slice(-2) + '.md';
+			post = '/posts/' + args + '-' + ('0' + (month + 1)).slice(-2) + '-' + ('0' + (day + 1)).slice(-2) + '.md';
 			try {
 				jQuery.get(post, function(txt) {
 					var md = txt.split("----------");
