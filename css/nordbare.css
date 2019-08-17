@@ -287,17 +287,23 @@ code[xx] {
     font-family: monospace;
     border-radius: 2px;
     text-transform: none;
-    font-weight: 300
+    font-weight: 300;
 }
 
 pre:not([class]) code,
 pre[xx] code {
-    padding: 2rem;
+    padding: 1rem;
     border: none;
     border-left: 4px solid var(--zero);
     border-radius: 0;
     width: 100%;
-    display: block
+    display: block;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: normal;
 }
 
 footer {
